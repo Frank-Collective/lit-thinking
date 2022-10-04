@@ -67,6 +67,7 @@ header {
   .spacer {
     height: 11.5vw;
     max-height: 157px;
+    min-height: 80px;
   }
 
   .inner {
@@ -75,6 +76,10 @@ header {
     @include gutter(padding-right);
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
 
     h1 {
       width: 55%;
@@ -88,12 +93,20 @@ header {
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include breakpoint(small) {
+        width: auto;
+      }
     }
 
     .copy {
       width: 38%;
       flex-shrink: 0;
       margin-top: 0.5em;
+
+      @include breakpoint(small) {
+        width: auto;
+      }
     }
   }
 }
@@ -102,8 +115,12 @@ header {
   @include gutter(padding-left);
   @include gutter(padding-right);
 
+  @include breakpoint(small) {
+    padding: 0;
+  }
+
   .inner {
-    @include content-max-width;
+    max-width: 1200px;
     @include gutter(padding-left);
     @include gutter(padding-right);
     display: flex;
@@ -125,8 +142,12 @@ header {
   @include gutter(padding-left);
   @include gutter(padding-right);
 
+  @include breakpoint(small) {
+    padding: 0;
+  }
+
   .inner {
-    @include content-max-width;
+    max-width: 1200px;
     @include gutter(padding-left);
     @include gutter(padding-right);
     display: flex;
@@ -148,8 +169,12 @@ header {
   @include gutter(padding-left);
   @include gutter(padding-right);
 
+  @include breakpoint(small) {
+    padding: 0;
+  }
+
   .inner {
-    @include content-max-width;
+    max-width: 1200px;
     @include gutter(padding-left);
     @include gutter(padding-right);
     display: flex;

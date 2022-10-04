@@ -18,6 +18,10 @@ footer {
   margin-top: -95px;
   pointer-events: none;
 
+  @include breakpoint(small) {
+    margin-top: 0;
+  }
+
   .bg-image {
     img {
       display: block;
@@ -40,8 +44,16 @@ footer {
     align-items: flex-end;
     pointer-events: all;
 
+    @include breakpoint(small) {
+      bottom: 10px;
+    }
+
     .logo {
       width: 80px;
+
+      @include breakpoint(small) {
+        width: 40px;
+      }
 
       img {
         display: block;

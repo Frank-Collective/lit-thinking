@@ -1,11 +1,13 @@
 @mixin h1 {
   font-size: 192px;
+  @include clamp("font-size", 110px, 14.06vw, 192px);
   letter-spacing: -0.024em;
   line-height: calc(192 / 188);
 }
 
 @mixin h3 {
   font-size: 28px;
+  @include clamp("font-size", 20px, 2.05vw, 28px);
   text-transform: uppercase;
   color: $black;
   letter-spacing: -0.02em;
@@ -29,6 +31,7 @@
 
 @mixin body-copy-large {
   font-size: 52.85px;
+  @include clamp("font-size", 30px, 3.86vw, 52.85px);
   font-weight: bold;
   color: $light-grey;
   letter-spacing: -0.02em;
